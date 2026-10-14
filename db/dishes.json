@@ -1,0 +1,5 @@
+[
+  { "dishId": "d1", "dishName": "Paneer Tikka", "imageUrl": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600", "isPublished": false },
+  { "dishId": "d2", "dishName": "Masala Dosa", "imageUrl": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=600", "isPublished": true },
+  { "dishId": "d3", "dishName": "Butter Chicken", "imageUrl": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600", "isPublished": false }
+]
