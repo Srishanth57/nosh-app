@@ -32,4 +32,4 @@ Frontend: `hooks/useDishes.js` (saved vs draft state), `components/`, GSAP motio
 See assignment Section 15 (replace `localhost:4000` with `localhost:3000/api`). Document how you created the bad-URL test case here.
 
 ## Known limitations / Time spent / AI disclosure
-TODO: fill in before submitting. AI tools were used to scaffold this project.
+Spend 1hr on designing, building using claude code for motion graphics and animations. 
