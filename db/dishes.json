@@ -1,5 +1,32 @@
 [
-  { "dishId": "d1", "dishName": "Paneer Tikka", "imageUrl": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600", "isPublished": false },
-  { "dishId": "d2", "dishName": "Masala Dosa", "imageUrl": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=600", "isPublished": true },
-  { "dishId": "d3", "dishName": "Butter Chicken", "imageUrl": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600", "isPublished": false }
+  {
+    "dishName": "Jeera Rice",
+    "dishId": "1",
+    "imageUrl": "https://nosh-assignment.s3.ap-south-1.amazonaws.com/jeera-rice.jpg",
+    "isPublished": true
+  },
+  {
+    "dishName": "Paneer Tikka",
+    "dishId": "2",
+    "imageUrl": "https://nosh-assignment.s3.ap-south-1.amazonaws.com/paneer-tikka.jpg",
+    "isPublished": true
+  },
+  {
+    "dishName": "Rabdi",
+    "dishId": "3",
+    "imageUrl": "https://nosh-assignment.s3.ap-south-1.amazonaws.com/rabdi.jpg",
+    "isPublished": true
+  },
+  {
+    "dishName": "Chicken Biryani",
+    "dishId": "4",
+    "imageUrl": "https://nosh-assignment.s3.ap-south-1.amazonaws.com/chicken-biryani.jpg",
+    "isPublished": true
+  },
+  {
+    "dishName": "Alfredo Pasta",
+    "dishId": "5",
+    "imageUrl": "https://nosh-assignment.s3.ap-south-1.amazonaws.com/alfredo-pasta.jpg",
+    "isPublished": true
+  }
 ]
