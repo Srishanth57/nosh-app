@@ -261,6 +261,14 @@ UPDATE dishes SET image_url = 'https://nosh-assignment.s3.ap-south-1.amazonaws.c
 
 (or run `npm run seed -- --reset`).
 
+### 8. Polling and "Newer data available"
+
+1. Open the app. In psql run: `UPDATE dishes SET dish_name = 'Changed in DB', version = version + 1 WHERE dish_id = '1';`
+2. Without touching card 1, wait up to 5 seconds.
+3. Reset, then start typing in card 1's name field (do not save) and run the same UPDATE again.
+4. Click Save on that card, then repeat step 3 and click **Discard** instead.
+   **Expected:** (2) card 1 updates to `Changed in DB` / `v2` with no reload. (3) your draft stays, the saved badge still shows the old version, and "Newer data available (v2)" appears. (4) Save returns a 409 and the conflict banner replaces the notice; after Discard the card shows the new data within a few seconds. Stopping the dev server for a few ticks shows no error banner and polling resumes when it is back. While the tab is hidden, DevTools > Network shows no requests.
+
 ## Known limitations
 
 - No real-time updates: other people's changes only show up after **Refresh**/reload, or as a 409 when you save.

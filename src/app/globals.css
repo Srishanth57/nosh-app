@@ -352,3 +352,8 @@ body {
     padding: 24px;
   }
 }
+
+.banner-info {
+  background: #e8f1ff;
+  color: #17407a;
+}
