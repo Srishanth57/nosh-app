@@ -6,9 +6,10 @@ export default function DishCard({ item, edit, discard, save, reloadLatest }) {
   const { saved, draft, saving, error, conflict } = item;
   const id = saved.dishId;
   const dirty = isDirty(item);
+  const savedLabel = saved.isPublished ? 'Published' : 'Unpublished';
 
   return (
-    <article className={`card dish-card${dirty ? ' is-dirty' : ''}`}>
+    <article className={`card dish-card${dirty ? ' is-dirty' : ''}`} aria-busy={saving}>
       <div className="dish-img">
         <img
           src={saved.imageUrl}
@@ -21,13 +22,25 @@ export default function DishCard({ item, edit, discard, save, reloadLatest }) {
 
       <label className="field">
         <span className="mono label">Dish name</span>
-        <input value={draft.dishName} onChange={(e) => edit(id, { dishName: e.target.value })} />
+        <input
+          value={draft.dishName}
+          disabled={saving}
+          onChange={(e) => edit(id, { dishName: e.target.value })}
+        />
       </label>
 
-      <label className="switch">
-        <input type="checkbox" checked={draft.isPublished} onChange={(e) => edit(id, { isPublished: e.target.checked })} />
+      <label className={`switch${saving ? ' is-disabled' : ''}`}>
+        <input
+          type="checkbox"
+          checked={draft.isPublished}
+          disabled={saving}
+          onChange={(e) => edit(id, { isPublished: e.target.checked })}
+        />
         <span className="track" aria-hidden />
         <span>{draft.isPublished ? 'Published' : 'Unpublished'}</span>
+        <span className={`mono badge ${saved.isPublished ? 'badge-pub' : 'badge-unpub'}`}>
+          Saved: {savedLabel}
+        </span>
         <span className="mono version">v{saved.version}</span>
       </label>
 
