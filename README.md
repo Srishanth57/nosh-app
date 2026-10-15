@@ -18,8 +18,8 @@ npm run dev               # http://localhost:3000
 
 ## API
 
-- `GET /api/dishes` -> 200 `[{dishId, dishName, imageUrl, isPublished, version}]`
-- `PATCH /api/dishes/:dishId` body `{dishName, isPublished, expectedVersion}` -> 200 | 400 | 404 | 409 (with `currentDish`) | 500
+- `GET /dishes` -> 200 `[{dishId, dishName, imageUrl, isPublished, version}]`
+- `PATCH /dishes/:dishId` body `{dishName, isPublished, expectedVersion}` -> 200 | 400 | 404 | 409 (with `currentDish`) | 500
 
 ## Architecture
 
